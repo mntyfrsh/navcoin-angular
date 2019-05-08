@@ -11,13 +11,13 @@ fi
 
 # create temp directory
 mkdir -p ../na-build/debian/DEBIAN
-mkdir -p ../na-build/debian/DEBIAN/opt/navcoin-angular
-mkdir -p ../na-build/debian/DEBIAN/etc/systemd/system
+mkdir -p ../na-build/debian/opt/navcoin-angular
+mkdir -p ../na-build/debian/etc/systemd/system
 
 # copy files
 cp -p debian_files/DEBIAN/* ../na-build/debian/DEBIAN/
-cp -p debian_files/DEBIAN/etc/systemd/system/* ../na-build/debian/DEBIAN/etc/systemd/system/
-cp -pr `pwd`/. ../na-build/debian/DEBIAN/opt/navcoin-angular/
+cp -p debian_files/DEBIAN/etc/systemd/system/* ../na-build/debian/etc/systemd/system/
+cp -pr `pwd`/. ../na-build/debian/opt/navcoin-angular/
 
 # build package
 cd ../na-build/
@@ -27,4 +27,5 @@ mv debian.deb navcoin-angular_$VERSION.deb
 echo
 echo "Package is ready at `pwd`/navcoin-angular_$VERSION.deb"
 echo
+echo "Install using: dpkg -i navcoin-angular_$VERSION.deb"
 echo
