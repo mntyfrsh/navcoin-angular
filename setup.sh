@@ -2,4 +2,5 @@
 
 # install npm modules
 npm i
-npm audit fix
+npm i -g @angular/cli
+#npm audit fix
