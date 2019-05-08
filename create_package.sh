@@ -22,7 +22,9 @@ cp -pr `pwd`/. ../na-build/debian/opt/navcoin-angular/
 # build package
 cd ../na-build/
 dpkg --build debian
-mv debian.deb navcoin-angular_$VERSION.deb
+mv debian.deb ../navcoin-angular_$VERSION.deb
+cd ..
+rm -rf na-build
 
 echo
 echo "Package is ready at `pwd`/navcoin-angular_$VERSION.deb"
