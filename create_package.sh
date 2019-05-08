@@ -10,21 +10,21 @@ if [ ! -d "`pwd`/node_modules" ]; then
 fi
 
 # create temp directory
-mkdir -p /tmp/na-build/debian/DEBIAN
-mkdir -p /tmp/na-build/debian/DEBIAN/opt/navcoin-angular
-mkdir -p /tmp/na-build/debian/DEBIAN/etc/systemd/system
+mkdir -p ../na-build/debian/DEBIAN
+mkdir -p ../na-build/debian/DEBIAN/opt/navcoin-angular
+mkdir -p ../na-build/debian/DEBIAN/etc/systemd/system
 
 # copy files
-cp -p debian_files/DEBIAN/* /tmp/na-build/debian/DEBIAN/
-cp -p debian_files/DEBIAN/etc/systemd/system/* /tmp/na-build/debian/DEBIAN/etc/systemd/system/
-cp -pr `pwd`/. /tmp/na-build/debian/DEBIAN/opt/navcoin-angular/
+cp -p debian_files/DEBIAN/* ../na-build/debian/DEBIAN/
+cp -p debian_files/DEBIAN/etc/systemd/system/* ../na-build/debian/DEBIAN/etc/systemd/system/
+cp -pr `pwd`/. ../na-build/debian/DEBIAN/opt/navcoin-angular/
 
 # build package
-cd /tmp/na-build/
+cd ../na-build/
 dpkg --build debian
-mv debian.deb /tmp/navcoin-angular_$VERSION.deb
+mv debian.deb navcoin-angular_$VERSION.deb
 
 echo
-echo "Package is ready at /tmp/navcoin-angular_$VERSION.deb"
+echo "Package is ready at `pwd`/navcoin-angular_$VERSION.deb"
 echo
 echo
