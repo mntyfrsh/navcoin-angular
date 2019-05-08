@@ -2,7 +2,7 @@
 
 VERSION="1.0.0"
 
-if [ ! -d "node_mdules" ]; then
+if [ ! -d "`pwd`/node_modules" ]; then
 	echo 
 	echo "Modules must be compiled using install_node_modules.sh before running this script"
 	echo
