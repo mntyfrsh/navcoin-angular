@@ -1,0 +1,9 @@
+Package: navcoin-angular
+Priority: extra
+Section: checkinstall
+Maintainer: info@navcoin.org
+Architecture: armhf
+Version: 1.0.0-1
+Depends: git
+Provides: navcoin-angular
+Description: Angular frontend for Navdroid
