@@ -1,6 +1,7 @@
 #!/bin/bash
 
 VERSION="1.0.0"
+ARCH=`uname -a | awk '{ print $13}'`
 
 if [ ! -d "`pwd`/node_modules" ]; then
 	echo 
@@ -22,12 +23,12 @@ cp -pr `pwd`/. ../na-build/debian/opt/navcoin-angular/
 # build package
 cd ../na-build/
 dpkg --build debian
-mv debian.deb ../navcoin-angular_$VERSION.deb
+mv debian.deb ../navcoin-angular_${VERSION}_$ARCH.deb
 cd ..
 rm -rf na-build
 
 echo
-echo "Package is ready at `pwd`/navcoin-angular_$VERSION.deb"
+echo "Package is ready at `pwd`/navcoin-angular_${VERSION}_$ARCH.deb"
 echo
-echo "Install using: dpkg -i navcoin-angular_$VERSION.deb"
+echo "Install using: dpkg -i navcoin-angular_${VERSIO}_$ARCH.deb"
 echo
