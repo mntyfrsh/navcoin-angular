@@ -3,12 +3,8 @@
 VERSION="1.0.0"
 ARCH=`uname -a | awk '{ print $13}'`
 
-if [ ! -d "`pwd`/node_modules" ]; then
-	echo 
-	echo "Modules must be compiled using install_node_modules.sh before running this script"
-	echo
-	exit 1
-fi
+# compile node modules
+npm i
 
 # create temp directory
 mkdir -p ../na-build/debian/DEBIAN
