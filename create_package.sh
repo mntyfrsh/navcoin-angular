@@ -23,7 +23,7 @@ mkdir -p ../na-build/debian/etc/systemd/system
 cp -p debian_files/DEBIAN/* ../na-build/debian/DEBIAN/
 cp -p debian_files/etc/systemd/system/* ../na-build/debian/etc/systemd/system/
 cp -pr `pwd`/. ../na-build/debian/opt/navcoin-angular/
-rm -rf `pwd`/. ../na-build/debian/opt/navcoin-angular/.git*
+rm -rf ../na-build/debian/opt/navcoin-angular/.git*
 
 # build package
 cd ../na-build/
