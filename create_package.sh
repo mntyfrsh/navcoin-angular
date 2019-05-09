@@ -35,5 +35,5 @@ rm -rf na-build
 echo
 echo "Package is ready at `pwd`/navcoin-angular_${VERSION}_$ARCH.deb"
 echo
-echo "Install using: dpkg -i navcoin-angular_${VERSIO}_$ARCH.deb"
+echo "Install using: dpkg -i navcoin-angular_${VERSION}_$ARCH.deb"
 echo
