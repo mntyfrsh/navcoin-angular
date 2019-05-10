@@ -13,6 +13,7 @@ ARCH=`uname -a | awk '{ print $13}'`
 
 # compile node modules
 npm i
+npm i @angular/cli
 
 # create temp directory
 mkdir -p ../na-build/debian/DEBIAN
