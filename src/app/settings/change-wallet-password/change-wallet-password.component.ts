@@ -54,7 +54,7 @@ export class ChangeWalletPasswordComponent implements OnInit {
         (receive: RpcReceive) => {
           if (receive.type === 'SUCCESS') {
             this.toastService.show(
-              'Wallet password successfully updated, please restart your Stakebox to begin using your encrypted wallet.',
+              'Wallet password successfully updated, please restart your Navdroid to begin using your encrypted wallet.',
               10000,
               'green'
             );

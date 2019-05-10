@@ -64,7 +64,7 @@ export class ConfigEditComponent implements OnInit {
         (response: RpcReceive) => {
           if (response.type === 'SUCCESS') {
             this.toastService.show(
-              `NavCoin config successfully updated, please restart your Stakebox`,
+              `NavCoin config successfully updated, please restart your Navdroid`,
               4000,
               'green'
             );
