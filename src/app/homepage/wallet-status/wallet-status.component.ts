@@ -151,7 +151,7 @@ export class WalletStatusComponent implements OnInit, OnDestroy {
       .subscribe(
         (receive: RpcReceive) => {
           this.toastService.show(
-            'Wallet successfully encrypted, please restart your Stakebox to begin using your encrypted wallet.',
+            'Wallet successfully encrypted, please restart your Navdroid to begin using your encrypted wallet.',
             10000,
             'green'
           );
