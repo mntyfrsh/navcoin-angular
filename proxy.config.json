@@ -1,11 +1,11 @@
 {
   "/api/*": {
-    "target": "https://localhost",
+    "target": "https://localhost:4100",
     "secure": false,
     "changeOrigin": true
   },
   "/util/*": {
-    "target": "https://localhost",
+    "target": "https://localhost:4100",
     "secure": false,
     "changeOrigin": true
   }
