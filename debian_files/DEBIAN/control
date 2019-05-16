@@ -1,6 +1,6 @@
 Package: navcoin-angular
 Maintainer: info@navcoin.org
-Architecture: arm
+Architecture: armhf
 Version: 1.0.0-1
 Provides: navcoin-angular
 Description: Angular frontend for Navdroid
