@@ -31,12 +31,12 @@ cd ../na-build/
 # compute md5sum
 find . -type f ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' ! -regex '.*?DEBIAN.*' -printf '%P ' | xargs md5sum > debian/DEBIAN/md5sums
 dpkg --build debian
-mv debian.deb ../navcoin-angular_${VERSION}_$ARCH.deb
+mv debian.deb ../navcoin-angular_${VERSION}-1_$ARCH.deb
 cd ..
 rm -rf na-build
 
 echo
-echo "Package is ready at `pwd`/navcoin-angular_${VERSION}_$ARCH.deb"
+echo "Package is ready at `pwd`/navcoin-angular_${VERSION}-1_$ARCH.deb"
 echo
-echo "Install using: dpkg -i navcoin-angular_${VERSION}_$ARCH.deb"
+echo "Install using: dpkg -i navcoin-angular_${VERSION}-1_$ARCH.deb"
 echo
