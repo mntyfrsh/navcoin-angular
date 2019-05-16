@@ -28,6 +28,8 @@ rm -rf ../na-build/debian/opt/navcoin-angular/.git*
 
 # build package
 cd ../na-build/
+# compute md5sum
+find . -type f ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' ! -regex '.*?DEBIAN.*' -printf '%P ' | xargs md5sum > debian/DEBIAN/md5sums
 dpkg --build debian
 mv debian.deb ../navcoin-angular_${VERSION}_$ARCH.deb
 cd ..
