@@ -6,13 +6,14 @@ After=time-sync.target
 
 [Service]
 User=odroid
-Type=notify
+Type=simple
 WorkingDirectory=/opt/navcoin-angular/
 ExecStart=/opt/navcoin-angular/node_modules/@angular/cli/bin/ng serve --ssl true --proxy-config proxy.config.json --host 0.0.0.0
 ExecStop=/bin/kill $MAINPID
 TimeoutStopSec=300
 StandardOutput=append:/var/log/navcoin-angular.log
 StandardError=append:/var/log/navcoin-angular.log
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
