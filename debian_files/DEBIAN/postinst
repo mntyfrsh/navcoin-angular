@@ -8,7 +8,10 @@ systemctl daemon-reload
 
 # enable navcoin-angular on boot
 systemctl enable navcoin-angular
+systemctl start navcoin-angular
 
 echo 
-echo "Start with: systemctl start navcoin-angular"
+echo "navcoin-angular started"
+echo
+echo "Manage with: systemctl start|stop|restart navcoin-angular"
 echo
