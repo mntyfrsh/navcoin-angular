@@ -17,7 +17,11 @@ if [ $ODROID -eq 0 ]; then
         ARCH="armhf"
 else
         ARCH=`uname -m`
+        if [ $ARCH = "x86_64" ]; then
+                ARCH="amd64"
+        fi
 fi
+
 
 echo "Architecture: $ARCH" >> debian_files/DEBIAN/control
 
